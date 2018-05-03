@@ -1,0 +1,28 @@
+{
+  "name": "clickergame-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaredk3nt/clickergame.git"
+  },
+  "author": "Jared Jones & Matt Ruston",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaredk3nt/clickergame/issues"
+  },
+  "homepage": "https://github.com/Jaredk3nt/clickergame#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "serve-static": "^1.13.2",
+    "sqlite3": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
