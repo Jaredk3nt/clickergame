@@ -1,0 +1,7 @@
+.input-wrapper {
+  width: 100%; }
+  .input-wrapper input[type=text] {
+    width: 100%;
+    padding: .75em .75em .75em 1.5em;
+    font-size: 1rem;
+    background-color: #e3e3e3; }

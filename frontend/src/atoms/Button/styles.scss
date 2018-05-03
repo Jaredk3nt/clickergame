@@ -1,0 +1,19 @@
+@import "styles/common.scss";
+
+.cg-button {
+    @for $i from 1 through length($colors-name-list) {
+        &.#{nth($colors-name-list, $i)} {
+            background: nth($colors-list, $i);
+            box-shadow: 0 8px nth($shadows-list, $i);
+
+            &:hover {
+                box-shadow: 0 6px nth($shadows-list, $i);
+                top: calc(-50% + 2px);
+            }
+            &:active {
+                box-shadow: 0 0 nth($shadows-list, $i);
+                top: calc(-50% + 6px);
+            }
+        }
+    }
+}

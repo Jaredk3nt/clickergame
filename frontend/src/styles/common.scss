@@ -1,0 +1,19 @@
+$green: #2DC672;
+$blue: #0D86E2;
+$purple: #8811D8;
+$white: #ffffff;
+$grey: #323232;
+
+$highlight: 10%;
+$green-light: lighten($green, $highlight);
+$blue-light: lighten($blue, $highlight);
+$purple-light: lighten($purple, $highlight);
+
+$shadow: 40%;
+$green-shadow: darken($green, $shadow);
+$blue-shadow: darken($blue, $shadow);
+$purple-shadow: darken($purple, $shadow);
+
+$colors-list: ($green, $blue, $purple);
+$colors-name-list: ('green','blue', 'purple');
+$shadows-list: ($green-shadow, $blue-shadow, $purple-shadow);

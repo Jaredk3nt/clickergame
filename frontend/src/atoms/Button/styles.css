@@ -1,0 +1,29 @@
+.cg-button.green {
+  background: #2DC672;
+  box-shadow: 0 8px #072012; }
+  .cg-button.green:hover {
+    box-shadow: 0 6px #072012;
+    top: calc(-50% + 2px); }
+  .cg-button.green:active {
+    box-shadow: 0 0 #072012;
+    top: calc(-50% + 6px); }
+
+.cg-button.blue {
+  background: #0D86E2;
+  box-shadow: 0 8px #021421; }
+  .cg-button.blue:hover {
+    box-shadow: 0 6px #021421;
+    top: calc(-50% + 2px); }
+  .cg-button.blue:active {
+    box-shadow: 0 0 #021421;
+    top: calc(-50% + 6px); }
+
+.cg-button.purple {
+  background: #8811D8;
+  box-shadow: 0 8px #11021b; }
+  .cg-button.purple:hover {
+    box-shadow: 0 6px #11021b;
+    top: calc(-50% + 2px); }
+  .cg-button.purple:active {
+    box-shadow: 0 0 #11021b;
+    top: calc(-50% + 6px); }
