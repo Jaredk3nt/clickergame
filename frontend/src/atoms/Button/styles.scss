@@ -1,18 +1,48 @@
 @import "styles/common.scss";
 
 .cg-button {
+    outline: none;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    transition: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    
+    &.default {
+        color: $grey;
+        background: $light-grey;
+        box-shadow: 0 10px $grey;
+
+        &:hover {
+            box-shadow: 0 8px $grey;
+            top: 2px;
+            cursor: pointer;
+        }
+        &:active {
+            box-shadow: 0 0 $grey;
+            top: 8px;
+        }
+    }
+    // Set up colored buttons
     @for $i from 1 through length($colors-name-list) {
         &.#{nth($colors-name-list, $i)} {
+            color: $white;
             background: nth($colors-list, $i);
             box-shadow: 0 8px nth($shadows-list, $i);
 
             &:hover {
                 box-shadow: 0 6px nth($shadows-list, $i);
-                top: calc(-50% + 2px);
+                top: 2px;
+                cursor: pointer;
             }
             &:active {
                 box-shadow: 0 0 nth($shadows-list, $i);
-                top: calc(-50% + 6px);
+                top: 6px;
             }
         }
     }

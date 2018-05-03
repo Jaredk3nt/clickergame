@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './styles/App.css';
 
+import Button from './atoms/Button/Button';
+import FormInput from './atoms/FormInput/FormInput';
+
 class App extends Component {
+  updateForm(value) {
+    console.log(value);
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="button-holder">
+          <FormInput placeholder="username" valueChange={this.updateForm}/>
+          <Button text="Green"/>
+        </div>
       </div>
     );
   }

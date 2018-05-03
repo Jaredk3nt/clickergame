@@ -3,13 +3,14 @@ $blue: #0D86E2;
 $purple: #8811D8;
 $white: #ffffff;
 $grey: #323232;
+$light-grey: #e3e3e3;
 
 $highlight: 10%;
 $green-light: lighten($green, $highlight);
 $blue-light: lighten($blue, $highlight);
 $purple-light: lighten($purple, $highlight);
 
-$shadow: 40%;
+$shadow: 30%;
 $green-shadow: darken($green, $shadow);
 $blue-shadow: darken($blue, $shadow);
 $purple-shadow: darken($purple, $shadow);

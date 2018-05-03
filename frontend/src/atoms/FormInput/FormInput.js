@@ -9,7 +9,7 @@ import './styles.css';
 class FormInput extends Component {
     constructor(props) {
         super(props);
-        this.state  = {value: ''};
+        this.state = {value: ''};
         this.handleChange = this.handleChange.bind(this);
     }
 
@@ -21,7 +21,7 @@ class FormInput extends Component {
     render() { 
         return ( 
             <div className="input-wrapper">
-                <input type="text" placeholderText={this.props.placeholder} value={this.state.value} onChange={this.handleChange}/>
+                <input type="text" placeholder={this.props.placeholder} value={this.state.value} onChange={this.handleChange}/>
             </div>
         )
     }
