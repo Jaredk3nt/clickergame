@@ -1,56 +1,79 @@
 .cg-button {
   outline: none;
-  position: relative;
   border: none;
-  border-radius: 5px;
+  position: relative;
+  border-radius: 10px;
   height: 100%;
   width: 100%;
   transition: none;
   text-align: center;
   font-weight: 700;
-  font-size: 1.2rem;
-  box-sizing: border-box; }
+  font-size: 1.1rem;
+  box-sizing: border-box;
+  font-family: 'Proxima Nova', sans-serif; }
   .cg-button.default {
-    color: #323232;
+    color: #323232, 10%;
     background: #e3e3e3;
-    box-shadow: 0 10px #323232; }
+    box-shadow: 0px 12px #323232;
+    font-size: 1.45rem; }
     .cg-button.default:hover {
-      box-shadow: 0 8px #323232;
+      box-shadow: 0px 10px #323232;
       top: 2px;
       cursor: pointer; }
     .cg-button.default:active {
-      box-shadow: 0 0 #323232;
-      top: 8px; }
+      box-shadow: 0px 0px #323232;
+      top: 10px; }
+    .cg-button.default:disabled {
+      color: #a3a3a3; }
   .cg-button.green {
     color: #ffffff;
     background: #2DC672;
-    box-shadow: 0 8px #11492a; }
+    box-shadow: 0 12px #11492a; }
     .cg-button.green:hover {
-      box-shadow: 0 6px #11492a;
+      box-shadow: 0px 10px #11492a;
       top: 2px;
       cursor: pointer; }
     .cg-button.green:active {
       box-shadow: 0 0 #11492a;
-      top: 6px; }
+      top: 10px; }
   .cg-button.blue {
     color: #ffffff;
     background: #0D86E2;
-    box-shadow: 0 8px #053051; }
+    box-shadow: 0 12px #053051; }
     .cg-button.blue:hover {
-      box-shadow: 0 6px #053051;
+      box-shadow: 0px 10px #053051;
       top: 2px;
       cursor: pointer; }
     .cg-button.blue:active {
       box-shadow: 0 0 #053051;
-      top: 6px; }
+      top: 10px; }
   .cg-button.purple {
     color: #ffffff;
     background: #8811D8;
-    box-shadow: 0 8px #2f064a; }
+    box-shadow: 0 12px #2f064a; }
     .cg-button.purple:hover {
-      box-shadow: 0 6px #2f064a;
+      box-shadow: 0px 10px #2f064a;
       top: 2px;
       cursor: pointer; }
     .cg-button.purple:active {
       box-shadow: 0 0 #2f064a;
-      top: 6px; }
+      top: 10px; }
+  .cg-button.clicked-down {
+    top: 10px; }
+    .cg-button.clicked-down:hover {
+      box-shadow: none;
+      top: 10px; }
+    .cg-button.clicked-down:active {
+      box-shadow: none;
+      top: 10px; }
+  .cg-button:disabled {
+    box-shadow: none;
+    top: 10px; }
+    .cg-button:disabled:hover {
+      box-shadow: none;
+      top: 10px;
+      cursor: default; }
+    .cg-button:disabled:active {
+      box-shadow: none;
+      top: 10px;
+      cursor: default; }

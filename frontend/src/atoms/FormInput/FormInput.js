@@ -20,7 +20,7 @@ class FormInput extends Component {
 
     render() { 
         return ( 
-            <div className="input-wrapper">
+            <div className="form-input">
                 <input type="text" placeholder={this.props.placeholder} value={this.state.value} onChange={this.handleChange}/>
             </div>
         )

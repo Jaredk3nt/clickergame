@@ -10,9 +10,9 @@ class Button extends Component {
     state = {}
 
     render() { 
-        const buttonClasses = `cg-button ${this.props.buttonColor || "default"}`
+        const buttonClasses = `cg-button ${this.props.buttonColor || "default"} ${this.props.clickedDown ? "clicked-down" : ""}`
         return ( 
-            <button className={buttonClasses} onClick={this.props.clickAction}>
+            <button className={buttonClasses} onClick={this.props.clickAction} disabled={this.props.disabled}>
                 { this.props.text }
             </button>
         )

@@ -1,12 +1,14 @@
-.input-wrapper {
-    width: 100%;
+@import "styles/common.scss";
+.form-input{
+    font-family: 'Proxima Nova', sans-serif;
 
     input[type=text] {
         width: 100%;
-        padding: .75em;
-        font-size: .85rem;
+        padding: 1em;
+        font-size: 1.1rem;
         background-color: #eaeaea;
         border: none;
+        box-sizing: border-box;
 
         &:focus {
             outline: none;

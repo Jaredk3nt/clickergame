@@ -1,0 +1,33 @@
+@import "styles/common.scss";
+
+$anim-time: 8s;
+$anim: 'gradient-anim';
+
+@mixin keyframe($animation_name) {
+    @-webkit-keyframes #{$animation_name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation_name} {
+        @content;
+    }
+    @keyframes #{$animation_name} {
+        @content;
+    }
+}
+
+.gradient-pane {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(244deg, $green 25%, $blue, $purple 70%);
+    background-size: 200% 200%;
+
+    -webkit-animation: $anim $anim-time ease-in-out infinite;
+    -moz-animation: $anim $anim-time ease-in-out infinite;
+    animation: $anim $anim-time ease-in-out infinite;
+
+    @include keyframe($anim) {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+}

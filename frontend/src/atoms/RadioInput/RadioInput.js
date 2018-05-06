@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles.css';
-import Button from '@/atoms/Button/Button';
+import Button from '../../atoms/Button/Button';
 
 /* <RadioInput />
  * Props: 
@@ -13,9 +13,13 @@ class RadioInput extends Component {
         return ( 
             <div className="radio-input-wrapper">
                 { 
-                    this.props.buttons.map( (button) => 
-                        <Button buttonColor={button.color} text={button.text} clickAction={button.click}/>
-                    )
+                    this.props.buttons.map( (button) => {
+                        return (
+                            <div className="radio-input">
+                                <Button buttonColor={button.color} text={button.text} clickAction={button.click}/>
+                            </div>
+                        );
+                    })
                 }
             </div>
         )

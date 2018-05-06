@@ -1,0 +1,32 @@
+.gradient-pane {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(244deg, #2DC672 25%, #0D86E2, #8811D8 70%);
+  background-size: 200% 200%;
+  -webkit-animation: "gradient-anim" 8s ease-in-out infinite;
+  -moz-animation: "gradient-anim" 8s ease-in-out infinite;
+  animation: "gradient-anim" 8s ease-in-out infinite; }
+
+@-webkit-keyframes gradient-anim {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@-moz-keyframes gradient-anim {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes gradient-anim {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }

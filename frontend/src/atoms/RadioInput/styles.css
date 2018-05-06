@@ -1,0 +1,8 @@
+.radio-input-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .radio-input-wrapper .radio-input {
+    height: 2.75em;
+    width: 30%; }
