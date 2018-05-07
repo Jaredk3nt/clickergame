@@ -59,7 +59,8 @@
       box-shadow: 0 0 #2f064a;
       top: 10px; }
   .cg-button.clicked-down {
-    top: 10px; }
+    top: 10px;
+    box-shadow: none; }
     .cg-button.clicked-down:hover {
       box-shadow: none;
       top: 10px; }

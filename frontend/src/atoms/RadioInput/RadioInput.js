@@ -7,7 +7,20 @@ import Button from '../../atoms/Button/Button';
  *   - 
  */
 class RadioInput extends Component {
-    state = {}
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedButton: undefined
+        };
+    }
+
+    radioSelected(button) {
+        if (this.state.selectedButton !== button) {
+            this.setState({selectedButton: button})
+            button.click();
+        }
+    }
 
     render() { 
         return ( 
@@ -16,7 +29,7 @@ class RadioInput extends Component {
                     this.props.buttons.map( (button) => {
                         return (
                             <div className="radio-input">
-                                <Button buttonColor={button.color} text={button.text} clickAction={button.click}/>
+                                <Button clickedDown={this.state.selectedButton === button} buttonColor={button.color} text={button.text} clickAction={() => this.radioSelected(button)}/>
                             </div>
                         );
                     })

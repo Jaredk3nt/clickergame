@@ -61,6 +61,7 @@ $button-shadow-height: $button-height - 2px;
 
     &.clicked-down {
         top: 10px;
+        box-shadow: none;
 
         &:hover {
             box-shadow: none;
