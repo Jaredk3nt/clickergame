@@ -18,7 +18,7 @@ class LandingPage extends Component {
             username: "",
             password: "",
             passwordChecked: false,
-            team: ""
+            team: undefined
         };
     }
 
@@ -62,7 +62,7 @@ class LandingPage extends Component {
     }
 
     readyToSubmit = () => {
-        if (this.state.email.length > 0 && this.state.username.length > 0 && this.state.passwordChecked) {
+        if (this.state.email.length > 0 && this.state.username.length > 0 && this.state.passwordChecked && this.state.team !== undefined) {
             console.log("true");
             return false;
         } else {
@@ -71,15 +71,22 @@ class LandingPage extends Component {
         }
     }
 
-    clickAction() {
-        console.log('click');
+    radioAction = (button) => {
+        console.log(button);
+        // this.setState({
+        //     team: child.color
+        // });
+    }
+
+    clickAction = () => {
+        console.log(this.state);
     }
 
     render() { 
         const buttonList = [
-            { color:'green', text:'Green', click: this.clickAction },
-            { color:'blue', text:'Blue', click: this.clickAction },
-            { color:'purple', text:'Purple', click: this.clickAction }
+            { color:'green', text:'Green', id: 1 },
+            { color:'blue', text:'Blue', id: 2 },
+            { color:'purple', text:'Purple', id: 3 }
         ];
         return ( 
             <div className="landing-container">
@@ -93,9 +100,9 @@ class LandingPage extends Component {
                     <div className="input-wrapper"><FormInput placeholder="Password" valueChange={this.updatePassword}/></div>
                     <div className="input-wrapper"><FormInput placeholder="Re-type Password" valueChange={this.checkPassword}/></div>
                     <div className="text-wrapper"><h3>choose your team:</h3></div>
-                    <div className="radio-wrapper"><RadioInput buttons={buttonList}/></div>
+                    <div className="radio-wrapper"><RadioInput buttons={buttonList} clickAction={this.radioAction}/></div>
                     <div className="button-wrapper">
-                        <Button text="Start clicking!" disabled={this.readyToSubmit()} clickAction={this.clickAction}/>
+                        <Button text="Start clicking!" disabled={false} clickAction={this.clickAction} clickedDown={this.state.clicked}/>
                     </div>
                 </div>
                 <div className="right-side">

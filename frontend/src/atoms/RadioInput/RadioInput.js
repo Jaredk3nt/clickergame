@@ -15,10 +15,11 @@ class RadioInput extends Component {
         };
     }
 
-    radioSelected(button) {
+    radioSelected = (button) => {
         if (this.state.selectedButton !== button) {
-            this.setState({selectedButton: button})
-            button.click();
+            this.setState({selectedButton: button}, () => {
+                this.props.clickAction(this.state.selectedButton);
+            });
         }
     }
 
@@ -29,7 +30,7 @@ class RadioInput extends Component {
                     this.props.buttons.map( (button) => {
                         return (
                             <div className="radio-input">
-                                <Button clickedDown={this.state.selectedButton === button} buttonColor={button.color} text={button.text} clickAction={() => this.radioSelected(button)}/>
+                                <Button clickedDown={this.state.selectedButton === button} buttonColor={button.color} text={button.text} clickAction={() => this.radioSelected(button)} key={button.id}/>
                             </div>
                         );
                     })
