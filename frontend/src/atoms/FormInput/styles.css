@@ -4,8 +4,17 @@
     width: 100%;
     padding: 1em;
     font-size: 1.1rem;
-    background-color: #eaeaea;
     border: none;
-    box-sizing: border-box; }
+    border-bottom: 3px #eaeaea solid;
+    box-sizing: border-box;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, #eaeaea 51%, #ffffff 50%);
+    transition: background-position 200ms ease; }
     .form-input input[type=text]:focus {
-      outline: none; }
+      outline: none;
+      background-position: 0 -100%;
+      background-image: linear-gradient(to bottom, #eaeaea 50%, #ffffff 50%); }
+    .form-input input[type=text].success {
+      border-bottom: 3px solid #e04c4c; }
+    .form-input input[type=text].error {
+      border-bottom: 3px solid #a4e579; }

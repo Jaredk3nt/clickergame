@@ -6,12 +6,25 @@
         width: 100%;
         padding: 1em;
         font-size: 1.1rem;
-        background-color: #eaeaea;
         border: none;
+        border-bottom: 3px #eaeaea solid;
         box-sizing: border-box;
+        background-size: 100% 200%;
+        background-image: linear-gradient(to bottom, #eaeaea 51%, #ffffff 50%);
+        transition: background-position 200ms ease;
 
         &:focus {
             outline: none;
+            background-position: 0 -100%;
+            background-image: linear-gradient(to bottom, #eaeaea 50%, #ffffff 50%);
+        }
+
+        &.success {
+            border-bottom: 3px solid $success-color;
+        }
+
+        &.error {
+            border-bottom: 3px solid $error-color;
         }
     }
 }

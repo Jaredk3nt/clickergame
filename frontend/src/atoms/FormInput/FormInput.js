@@ -5,6 +5,7 @@ import './styles.css';
  * Props: 
  *   - placeholder: string for placeholder text of input
  *   - valueChange: function to handle input value
+ *   - success: true gives success class, false gives error class, undefined gives default behavior
  */
 class FormInput extends Component {
     constructor(props) {
@@ -18,10 +19,19 @@ class FormInput extends Component {
         this.setState({value: event.target.value});
     }
 
+    successState = () => {
+        if (this.props.success === undefined) {
+            return "";
+        } else {
+            return this.props.success ? "error" : "success";
+        }
+    }
+
     render() { 
+        const classes = `${this.successState()}`;
         return ( 
             <div className="form-input">
-                <input type="text" placeholder={this.props.placeholder} value={this.state.value} onChange={this.handleChange}/>
+                <input type="text" placeholder={this.props.placeholder} value={this.state.value} onChange={this.handleChange} className={classes}/>
             </div>
         )
     }
