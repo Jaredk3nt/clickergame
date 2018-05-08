@@ -1,6 +1,6 @@
 .form-input {
   font-family: 'Proxima Nova', sans-serif; }
-  .form-input input[type=text] {
+  .form-input input[type=text], .form-input input[type=password] {
     width: 100%;
     padding: 1em;
     font-size: 1.1rem;
@@ -10,11 +10,11 @@
     background-size: 100% 200%;
     background-image: linear-gradient(to bottom, #eaeaea 51%, #ffffff 50%);
     transition: background-position 200ms ease; }
-    .form-input input[type=text]:focus {
+    .form-input input[type=text]:focus, .form-input input[type=password]:focus {
       outline: none;
       background-position: 0 -100%;
       background-image: linear-gradient(to bottom, #eaeaea 50%, #ffffff 50%); }
-    .form-input input[type=text].success {
+    .form-input input[type=text].success, .form-input input[type=password].success {
       border-bottom: 3px solid #e04c4c; }
-    .form-input input[type=text].error {
+    .form-input input[type=text].error, .form-input input[type=password].error {
       border-bottom: 3px solid #a4e579; }

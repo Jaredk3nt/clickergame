@@ -17,7 +17,7 @@ class LandingPage extends Component {
             email: "",
             username: "",
             password: "",
-            passwordChecked: false,
+            passwordChecked: undefined,
             team: undefined,
             teamId: undefined,
             buttonList: [
@@ -69,11 +69,9 @@ class LandingPage extends Component {
 
     readyToSubmit = () => {
         if (this.state.email.length > 0 && this.state.username.length > 0 && this.state.passwordChecked && this.state.team !== undefined) {
-            console.log("true");
             return false;
         } else {
-            console.log("false");
-            return false;
+            return true;
         }
     }
 
@@ -94,6 +92,14 @@ class LandingPage extends Component {
         console.log(this.state);
     }
 
+    fieldNotEmpty = (val) => {
+        if (val.length > 0) {
+            return true;
+        } else {
+            return undefined;
+        }
+    } 
+
     render() { 
         return ( 
             <div className="landing-container">
@@ -103,13 +109,13 @@ class LandingPage extends Component {
                         <div className="bottom-text">ACCOUNT</div>
                     </div>
                     <div className="input-wrapper"><FormInput placeholder="Email" valueChange={this.updateEmail} success={this.validateEmail()}/></div>
-                    <div className="input-wrapper"><FormInput placeholder="Username" valueChange={this.updateUsername}/></div>
-                    <div className="input-wrapper"><FormInput placeholder="Password" valueChange={this.updatePassword}/></div>
-                    <div className="input-wrapper"><FormInput placeholder="Re-type Password" valueChange={this.checkPassword}/></div>
+                    <div className="input-wrapper"><FormInput placeholder="Username" valueChange={this.updateUsername} success={this.fieldNotEmpty(this.state.username)}/></div>
+                    <div className="input-wrapper"><FormInput placeholder="Password" valueChange={this.updatePassword} password={true} success={this.fieldNotEmpty(this.state.password)}/></div>
+                    <div className="input-wrapper"><FormInput placeholder="Re-type Password" valueChange={this.checkPassword} success={this.state.passwordChecked} password={true}/></div>
                     <div className="text-wrapper"><h3>choose your team:</h3></div>
                     <div className="radio-wrapper"><RadioInput buttons={this.state.buttonList} clickAction={this.radioAction} initialSelect={this.state.teamId}/></div>
                     <div className="button-wrapper">
-                        <Button text="Start clicking!" disabled={false} clickAction={this.clickAction} clickedDown={this.state.clicked}/>
+                        <Button text="Start clicking!" disabled={this.readyToSubmit()} clickAction={this.clickAction} clickedDown={this.state.clicked}/>
                     </div>
                 </div>
                 <div className="right-side">

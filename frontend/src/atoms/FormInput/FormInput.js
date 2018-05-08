@@ -31,7 +31,7 @@ class FormInput extends Component {
         const classes = `${this.successState()}`;
         return ( 
             <div className="form-input">
-                <input type="text" placeholder={this.props.placeholder} value={this.state.value} onChange={this.handleChange} className={classes}/>
+                <input type={this.props.password !== undefined ? "password" : "text"} placeholder={this.props.placeholder} value={this.state.value} onChange={this.handleChange} className={classes}/>
             </div>
         )
     }
