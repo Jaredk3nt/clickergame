@@ -7,14 +7,17 @@ import LandingPage from './organisms/LandingPage/LandingPage';
 class App extends Component {
     constructor(props) {
         super(props);
-        console.log(this.props.location);
+        if (this.props.location.pathname === "/") {
+            this.props.history.push("/home");
+        }
+        console.log(this.props.location.pathname);
     }
 
     render() {
         return (
             <div className="App">
                 <Switch>
-                    <Route exact path="/" component={LandingPage}/>
+                    <Route exact path="/home" component={LandingPage}/>
                 </Switch>
             </div>
         );

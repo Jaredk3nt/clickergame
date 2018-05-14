@@ -35,7 +35,7 @@ class RadioInput extends Component {
                     this.props.buttons.map( (button) => {
                         return (
                             <div className="radio-input" key={button.id}>
-                                <Button clickedDown={this.state.selectedButton === button.id} buttonColor={button.color} text={button.text} clickAction={() => this.radioSelected(button)}/>
+                                <Button clickedDown={this.state.selectedButton === button.id} color={button.color} text={button.text} clickAction={() => this.radioSelected(button)}/>
                             </div>
                         );
                     })

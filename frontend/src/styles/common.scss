@@ -17,6 +17,15 @@ $green-shadow: darken($green, $shadow);
 $blue-shadow: darken($blue, $shadow);
 $purple-shadow: darken($purple, $shadow);
 
+$darken: 40%;
+$green-dark: darken($green, $darken);
+$blue-dark: darken($blue, $darken);
+$purple-dark: darken($purple, $darken);
+
 $colors-list: ($green, $blue, $purple);
 $colors-name-list: ('green','blue', 'purple');
+$lights-list: ($green-light, $blue-light, $purple-light);
 $shadows-list: ($green-shadow, $blue-shadow, $purple-shadow);
+$darks-list: ($green-dark, $blue-dark, $purple-dark);
+
+$side-bar-width: 4em;
