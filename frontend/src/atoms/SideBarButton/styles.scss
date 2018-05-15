@@ -4,12 +4,21 @@
     width: 100%;
     height: $side-bar-width;
     background-color: rgba(0,0,0,0);
+    border: none;
+    color: $white;
+
+    &:focus {
+        outline: none;
+    }
 
     // Set up colored buttons
     @for $i from 1 through length($colors-name-list) {
         &.#{nth($colors-name-list, $i)} {
             &.toggled {
                 background-color: nth($lights-list, $i);
+                &:hover {
+                    background-color: nth($lights-list, $i);
+                }
             }
             &:hover {
                 background-color: nth($shadows-list, $i);

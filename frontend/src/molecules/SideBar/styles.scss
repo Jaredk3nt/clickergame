@@ -1,0 +1,40 @@
+@import "styles/common.scss";
+
+.side-bar-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: $side-bar-width 1fr;
+
+    .side-bar-tabs {
+        height: 100%;
+        width: 100%;
+        grid-column-start: 1;
+    }
+
+    .side-bar-active-area {
+        height: 100%;
+        width: 100%;
+        grid-column-start: 2;
+        
+        //testing
+        color: $white;
+        font-weight: 700;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // Set up colored buttons
+    @for $i from 1 through length($colors-name-list) {
+        &.#{nth($colors-name-list, $i)} {
+            .side-bar-tabs {
+                background-color: nth($darks-list, $i);
+            }
+            .side-bar-active-area {
+                background-color: nth($shadows-list, $i);
+                border-right: 5px solid nth($shadows-list, $i);
+            }
+        }
+    }
+}

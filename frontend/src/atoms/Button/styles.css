@@ -27,7 +27,7 @@
       color: #a3a3a3; }
   .cg-button.green {
     color: #ffffff;
-    background: #2DC672;
+    background: #4fd78c;
     box-shadow: 0 12px #11492a; }
     .cg-button.green:hover {
       box-shadow: 0px 10px #11492a;
@@ -38,7 +38,7 @@
       top: 10px; }
   .cg-button.blue {
     color: #ffffff;
-    background: #0D86E2;
+    background: #2f9ef3;
     box-shadow: 0 12px #053051; }
     .cg-button.blue:hover {
       box-shadow: 0px 10px #053051;
@@ -49,7 +49,7 @@
       top: 10px; }
   .cg-button.purple {
     color: #ffffff;
-    background: #8811D8;
+    background: #a12def;
     box-shadow: 0 12px #2f064a; }
     .cg-button.purple:hover {
       box-shadow: 0px 10px #2f064a;

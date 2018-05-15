@@ -40,7 +40,7 @@ $button-shadow-height: $button-height - 2px;
     @for $i from 1 through length($colors-name-list) {
         &.#{nth($colors-name-list, $i)} {
             color: $white;
-            background: nth($colors-list, $i);
+            background: nth($lights-list, $i);
             box-shadow: 0 $button-height nth($shadows-list, $i);
 
             &:hover {
