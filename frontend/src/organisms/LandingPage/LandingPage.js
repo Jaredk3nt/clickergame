@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 import Button from '../../atoms/Button/Button';
@@ -13,6 +14,7 @@ class LandingPage extends Component {
         this.state = {
             currentColor: 'green'
         };
+        // Set up timer for changeColor() that is reset if the user changes the color manually
     } 
 
     goToLogin = () => {
@@ -39,7 +41,7 @@ class LandingPage extends Component {
         const classes = `landing-container ${this.state.currentColor}`
         return ( 
             <div className={classes}>
-                <div className="logo-title">Clickerga.me</div>
+                <Link className="logo-title" to="/">Clickerga.me</Link>
                 <div className="left-side">
                     <div className="split-title">
                         <div className="top-text">choose your</div>
@@ -51,7 +53,11 @@ class LandingPage extends Component {
                     <div className="link-text">Already clicking? Log in here</div>
                 </div>
                 <div className="right-side">
-
+                    <div className="colored-area">
+                        <div className="button-wrapper">
+                        <Button text={this.state.currentColor.toUpperCase()} clickAction={this.changeColor} color={this.state.currentColor} bigText={true}/>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

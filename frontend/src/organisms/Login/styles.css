@@ -20,19 +20,22 @@
       color: #323232; }
       .login-container .left-side .split-title .top-text {
         font-size: 1.75rem;
-        font-weight: 900; }
+        font-weight: 900;
+        line-height: 1; }
       .login-container .left-side .split-title .bottom-text {
         font-size: 3.5rem;
-        font-weight: 900; }
+        font-weight: 900;
+        line-height: 1; }
     .login-container .left-side .button-wrapper {
       height: 3.5em;
       width: 100%;
       margin-bottom: 1.5em; }
     .login-container .left-side .link-text {
-      text-align: center;
+      text-align: left;
       font-size: 1rem;
       width: 100%;
-      color: #323232; }
+      color: #323232;
+      margin-left: 1em; }
       .login-container .left-side .link-text:hover {
         cursor: pointer;
         color: #7f7f7f; }

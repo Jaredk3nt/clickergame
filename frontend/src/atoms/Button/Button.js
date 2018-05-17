@@ -8,12 +8,13 @@ import './styles.css';
  *   - color: define the color of the users button
  *   - clickedDown: define if the button is in the clicked down state
  *   - disabled: define if the button is in the disabled state
+ *   - bigText: boolean defines if text is large on button
  */
 class Button extends Component {
     state = {}
 
     render() { 
-        const buttonClasses = `cg-button ${this.props.color || "default"} ${this.props.clickedDown ? "clicked-down" : ""}`
+        const buttonClasses = `cg-button ${this.props.color || "default"} ${this.props.clickedDown ? "clicked-down" : ""} ${this.props.bigText ? "big-text" : ""}`
         return ( 
             <button className={buttonClasses} onClick={this.props.clickAction} disabled={this.props.disabled}>
                 { this.props.text }

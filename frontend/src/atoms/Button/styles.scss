@@ -16,6 +16,10 @@ $button-shadow-height: $button-height - 2px;
     font-size: 1.1rem;
     box-sizing: border-box;
     font-family: 'Proxima Nova', sans-serif;
+
+    &.big-text {
+        font-size: 2.25rem;
+    }
     
     &.default {
         color: $grey, 10%;
