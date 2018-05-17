@@ -1,0 +1,29 @@
+@import "styles/common.scss";
+
+.score-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0em;
+
+    .title {
+        font-size: .9rem;
+        font-weight: 700;
+    }
+    .count {
+        font-size: 2rem;
+        color: $white;
+        font-weight: 700;
+    }
+    // Set up colored buttons
+    @for $i from 1 through length($colors-name-list) {
+        &.#{nth($colors-name-list, $i)} {
+            background-color: nth($colors-list, $i);
+
+            .title {
+                color: nth($darks-list, $i);
+            }
+        }
+    }
+}

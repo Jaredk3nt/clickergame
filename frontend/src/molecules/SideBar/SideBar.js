@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles.css';
 
 import SideBarButton from '../../atoms/SideBarButton/SideBarButton';
+import TeamTab from '../TeamTab/TeamTab';
 /* <SideBar color=""/>
  * Props: 
  *   - 
@@ -42,7 +43,7 @@ class SideBar extends Component {
                         )
                     }
                 </div><div className="side-bar-active-area">
-                    {this.state.activeTab}
+                    <TeamTab color={this.props.color}/>
                 </div>
             </div>
         )

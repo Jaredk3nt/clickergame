@@ -1,0 +1,25 @@
+.score-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0em; }
+  .score-card .title {
+    font-size: .9rem;
+    font-weight: 700; }
+  .score-card .count {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 700; }
+  .score-card.green {
+    background-color: #2DC672; }
+    .score-card.green .title {
+      color: #072012; }
+  .score-card.blue {
+    background-color: #0D86E2; }
+    .score-card.blue .title {
+      color: #021421; }
+  .score-card.purple {
+    background-color: #8811D8; }
+    .score-card.purple .title {
+      color: #11021b; }

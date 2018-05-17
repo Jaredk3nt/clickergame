@@ -4,6 +4,7 @@ import './styles/App.css';
 
 import LandingPage from './organisms/LandingPage/LandingPage';
 import Dashboard from './organisms/Dashboard/Dashboard';
+import Login from './organisms/Login/Login';
 
 class App extends Component {
     constructor(props) {
@@ -19,6 +20,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path="/" component={Dashboard}/>
                     <Route path="/home" component={LandingPage}/>
+                    <Route path="/login" component={Login}/>
                 </Switch>
             </div>
         );

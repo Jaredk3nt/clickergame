@@ -37,6 +37,7 @@ $button-shadow-height: $button-height - 2px;
         }
     }
     // Set up colored buttons
+    // Make mixin for this to make it reusable
     @for $i from 1 through length($colors-name-list) {
         &.#{nth($colors-name-list, $i)} {
             color: $white;

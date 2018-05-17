@@ -17,12 +17,13 @@
         grid-column-start: 2;
         
         //testing
-        color: $white;
-        font-weight: 700;
-        font-size: 1.2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // color: $white;
+        // font-weight: 700;
+        // font-size: 1.2rem;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
     }
 
     // Set up colored buttons
@@ -33,7 +34,7 @@
             }
             .side-bar-active-area {
                 background-color: nth($shadows-list, $i);
-                border-right: 5px solid nth($shadows-list, $i);
+                border-right: 4px solid nth($shadows-list, $i);
             }
         }
     }
